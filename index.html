@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Sorting Visualizer</title>
+
+  <style>
+    /* Fullscreen Background */
+    body {
+      background: url('images/Sorting-Algorithms.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Centering Content */
+    .center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Header (Navbar) */
+    .nav-container {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    /* Array Visualizer (Rotated 180 Degrees & Reversed Order) */
+    .array {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 80%;
+      height: 200px;
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+      transform: rotate(180deg);
+      flex-direction: row;
+      
+      /* Rotate & Reverse Order */
+    }
+
+    /* Fix Bar Rotation */
+    .array div {
+      transform: rotate(-180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header/Navbar -->
+  <div class="nav-container">
+    <h2 class="title" onclick="window.location.reload()">Sorting Visualizer</h2>
+    <div class="navbar">
+      <a id="random" onclick="RenderScreen()">Generate array</a>
+      <span class="options">
+        <select id="menu" class="algo-menu">
+          <option value="0">Choose algorithm</option>
+          <option value="1">Bubble Sort</option>
+          <option value="2">Selection Sort</option>
+          <option value="3">Insertion Sort</option>
+          <option value="4">Merge Sort</option>
+          <option value="5">Quick Sort</option>
+        </select>
+      </span>
+      <span class="options">
+        <select id="menu" class="size-menu">
+          <option value="0">Array size</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+          <option value="90">90</option>
+          <option value="100">100</option>
+        </select>
+      </span>
+      <span class="options">
+        <select id="menu" class="speed-menu">
+          <option value="0">Speed</option>
+          <option value="0.5">0.50x</option>
+          <option value="0.75">0.75x</option>
+          <option value="1">1.00x</option>
+          <option value="2">2.00x</option>
+          <option value="4">4.00x</option>
+        </select>
+      </span>
+      <a class="start">Sort</a>
+      <a class="icon"><i class="fa fa-bars"></i></a>
+    </div>
+  </div>
+
+  <!-- Sorting Visualizer in Center -->
+  <div class="center">
+    <div class="array">
+      <!-- Sorting bars will be generated here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <a href="#home" class="footer-link">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span>Home</span>
+      </a>
+      <a href="#about" class="footer-link">
+        <i class="fas fa-info-circle"></i>
+        <span>Info</span>
+      </a>
+      <a href="https://github.com/Rakshitrak21" target="_blank" class="footer-link">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/rakshit-129451235/" target="_blank" class="footer-link">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="mailto:rakshitrak21@gmail.com" target="_blank" class="footer-link">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Gmail</span>
+      </a>
+    </div>
+    <p class="footer-credit">Created by Rakshit</p>
+  </footer>
+
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/helper.js"></script>
+  <script src="./scripts/sort-algorithms.js"></script>
+</body>
+
+</html>
