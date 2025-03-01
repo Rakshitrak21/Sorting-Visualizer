@@ -81,15 +81,12 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; /* Added shadow to make page border free */
   height: 420px;
   width: 410px;
-  max-height: 600px;
+  max-height: 650px;
   transform: rotate(180deg);
   margin-top: -20px;
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-    
+  justify-content: center; 
   
 }
 .image-container {
