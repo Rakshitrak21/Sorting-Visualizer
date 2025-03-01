@@ -84,7 +84,11 @@ body {
   max-height: 600px;
   transform: rotate(180deg);
   margin-top: -20px;
-  
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+    
   
 }
 .image-container {
