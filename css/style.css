@@ -83,6 +83,7 @@ body {
   width: 410px;
   max-height: 731px;
   transform: rotate(180deg);
+  bottom-padding: 20%;
   
   
 }
